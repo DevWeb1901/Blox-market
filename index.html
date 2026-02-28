@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blox Market</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background: linear-gradient(135deg,#ff8c00,#ffffff,#8b4513);
+}
+
+header{
+    text-align:center;
+    padding:20px;
+    background: linear-gradient(90deg,#ff6a00,#ffffff,#a0522d);
+    color:black;
+}
+
+.banner img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+}
+
+.container{
+    padding:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:25px;
+    box-shadow:0 6px 15px rgba(0,0,0,0.2);
+}
+
+.menu-img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:12px;
+    margin-bottom:15px;
+}
+
+.product-btn{
+    display:block;
+    width:100%;
+    margin:6px 0;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#ff6a00;
+    color:white;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.2s;
+}
+
+.product-btn:hover{
+    background:#cc5500;
+}
+
+.selected{
+    background:#8b4513 !important;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin-top:12px;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+
+.order-btn{
+    margin-top:12px;
+    width:100%;
+    padding:14px;
+    background:#8b4513;
+    color:white;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.order-btn:hover{
+    background:#5c2d0c;
+}
+
+.payment{
+    background:#f4f4f4;
+    padding:15px;
+    border-radius:10px;
+    font-size:14px;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:white;
+    font-weight:bold;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>🟠 BLOX MARKET 🟠</h1>
+<p>Top Up Roblox Aman & Terpercaya</p>
+</header>
+
+<div class="banner">
+    <img src="banner.jpg">
+</div>
+
+<div class="container">
+
+<!-- ROBUX -->
+<div class="card">
+<h2>ROBUX 5-7 HARI</h2>
+<img src="robux.jpg" class="menu-img">
+
+<button class="product-btn" onclick="pilihProduk(this,'80 Robux - 10.000')">80 Robux - 10.000</button>
+<button class="product-btn" onclick="pilihProduk(this,'100 Robux - 15.000')">100 Robux - 15.000</button>
+<button class="product-btn" onclick="pilihProduk(this,'200 Robux - 28.000')">200 Robux - 28.000</button>
+<button class="product-btn" onclick="pilihProduk(this,'300 Robux - 40.000')">300 Robux - 40.000</button>
+<button class="product-btn" onclick="pilihProduk(this,'500 Robux - 60.000')">500 Robux - 60.000</button>
+<button class="product-btn" onclick="pilihProduk(this,'600 Robux - 80.000')">600 Robux - 80.000</button>
+<button class="product-btn" onclick="pilihProduk(this,'700 Robux - 95.000')">700 Robux - 95.000</button>
+<button class="product-btn" onclick="pilihProduk(this,'800 Robux - 110.000')">800 Robux - 110.000</button>
+<button class="product-btn" onclick="pilihProduk(this,'1000 Robux - 135.000')">1000 Robux - 135.000</button>
+
+<input type="text" id="username" placeholder="Masukkan Username Roblox">
+<button class="order-btn" onclick="order()">ORDER SEKARANG</button>
+</div>
+
+<!-- BROOKHAVEN -->
+<div class="card">
+<h2>GAMEPASS BROOKHAVEN</h2>
+<img src="brookhaven.jpg" class="menu-img">
+
+<button class="product-btn" onclick="pilihProduk(this,'Brookhaven VIP - 140K')">VIP - 140K</button>
+<button class="product-btn" onclick="pilihProduk(this,'Brookhaven Premium - 50K')">Premium - 50K</button>
+<button class="product-btn" onclick="pilihProduk(this,'Brookhaven Penthouse - 25K')">Penthouse - 25K</button>
+<button class="product-btn" onclick="pilihProduk(this,'Brookhaven Music - 30K')">Music - 30K</button>
+<button class="product-btn" onclick="pilihProduk(this,'Brookhaven Speed - 30K')">Speed - 30K</button>
+<button class="product-btn" onclick="pilihProduk(this,'Brookhaven Vehicle Pack - 110K')">Vehicle Pack - 110K</button>
+
+<p><b>Add Friend Seller:</b> dzaaldv</p>
+</div>
+
+<!-- MM2 -->
+<div class="card">
+<h2>SWORD MURDER MYSTERY 2</h2>
+<img src="mm2.jpg" class="menu-img">
+
+<p>Untuk melihat daftar sword MM2 yang tersedia, silakan chat seller.</p>
+<button class="product-btn" onclick="tanyaMM2()">Lihat List MM2</button>
+</div>
+
+<!-- STK -->
+<div class="card">
+<h2>SWORD SURVIVE THE KILLER</h2>
+<img src="stk.jpg" class="menu-img">
+
+<p>Untuk melihat daftar sword STK yang tersedia, silakan chat seller.</p>
+<button class="product-btn" onclick="tanyaSTK()">Lihat List STK</button>
+</div>
+
+<!-- AVATAR -->
+<div class="card">
+<h2>CUSTOM AVATAR</h2>
+<img src="avatar.jpg" class="menu-img">
+<button class="product-btn" onclick="pilihProduk(this,'Custom Avatar')">Pesan Custom Avatar</button>
+</div>
+
+<!-- PAYMENT -->
+<div class="card payment">
+<h3>Metode Pembayaran</h3>
+<p>BRI : 88810087897493566</p>
+<p>BCA : 3901087897493566</p>
+<p>Mandiri : 89508087897493566</p>
+<p>BNI : 8810087897493566</p>
+<p>DANA/OVO : 087897493566</p>
+<p>BSI : 087897493566</p>
+</div>
+
+</div>
+
+<footer>
+Jika sudah bayar kirim bukti transfer ke WA: 878-9749-3566
+</footer>
+
+<script>
+var produkDipilih = "";
+
+function pilihProduk(element,produk){
+    produkDipilih = produk;
+    var buttons = document.querySelectorAll(".product-btn");
+    buttons.forEach(btn => btn.classList.remove("selected"));
+    element.classList.add("selected");
+}
+
+function order(){
+    var user = document.getElementById("username").value;
+
+    if(produkDipilih === ""){
+        alert("Pilih produk dulu!");
+        return;
+    }
+
+    if(user === ""){
+        alert("Username kosong! Harap isi username terlebih dahulu.");
+        return;
+    }
+
+    var pesan = "Halo min blox, saya mau beli " + produkDipilih +
+    ". Username saya: " + user +
+    ". Saya akan kirim bukti transfer.";
+
+    var url = "https://wa.me/6287897493566?text=" + encodeURIComponent(pesan);
+    window.open(url,"_blank");
+}
+
+function tanyaMM2(){
+    var url = "https://wa.me/6287897493566?text=" + 
+    encodeURIComponent("Halo min, saya mau lihat list sword MM2 yang tersedia.");
+    window.open(url,"_blank");
+}
+
+function tanyaSTK(){
+    var url = "https://wa.me/6287897493566?text=" + 
+    encodeURIComponent("Halo min, saya mau lihat list sword STK yang tersedia.");
+    window.open(url,"_blank");
+}
+</script>
+
+</body>
+</html>
